@@ -13,3 +13,9 @@ if(isTrue) {
 else {
     console.log("Your system is not blasting")
 }
+
+// change for website title
+document.title = "Learning Javascript"  
+
+// style the element like inline CSS
+document.body.style.backgroundColor = "red"
