@@ -12,7 +12,8 @@ console.log(typeof a, typeof b, typeof c, typeof p, typeof q, typeof r)
 // ovject
 let obj = {
     name: "Mohd Aman",
-    "jobe role": "Web Developer"
+    "jobe role": "Web Developer",
+    "is_handsome": false
 }
 console.log(obj)
 
@@ -21,5 +22,6 @@ obj.salary = 1200000
 console.log(obj)
 
 // update for increase salary
+obj.is_handsome = true
 obj.salary =  3600000
 console.log(obj)
