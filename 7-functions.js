@@ -31,4 +31,4 @@ const func1 = (x) => {
 
 func1(24)
 func1(12)
-func1(54)
+func1(65)
