@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM & BOM</title>
+</head>
+
+<body>
+    <h1>DOM - Stands for Document object model. </h1>
+    <p>
+        The DOM (Document Object Model) is an API that represents and interacts with any HTML or XML-based markup
+        language document. The DOM is a document model loaded in the browser and representing the document as a node
+        tree, or DOM tree, where each node represents part of the document (e.g. an element, text string, or comment).
+
+    </p>
+
+    <p>
+        The DOM is one of the most-used APIs on the Web because it allows code running in a browser to access and
+        interact with every node in the document. Nodes can be created, moved, and changed. Event listeners can be added
+        to nodes and triggered on the occurrence of a given event.
+    </p>
+
+    <p style="clear: right;">
+        <h4>From Wikipedia:-</h4>
+        <img src="DOM structure.png" alt="" style="float: right;" height="350px">
+        The Document Object Model (DOM) is a cross-platform and language-independent interface that treats an HTML or
+        XML document as a tree structure wherein each node is an object representing a part of the document. The DOM
+        represents a document with a logical tree. Each branch of the tree ends in a node, and each node contains
+        objects. DOM methods allow programmatic access to the tree; with them one can change the structure, style or
+        content of a document.[2] Nodes can have event handlers (also known as event listeners) attached to them. Once
+        an event is triggered, the event handlers get executed.[3]
+
+        The principal standardization of the DOM was handled by the World Wide Web Consortium (W3C), which last
+        developed a recommendation in 2004. WHATWG took over the development of the standard, publishing it as a living
+        document. The W3C now publishes stable snapshots of the WHATWG standard.
+
+    </p>
+    <table>
+        <ul>
+            <li>A document is a document node.</li>
+            <li>All HTML elements are element nodes.</li>
+            <li>All HTML attributes are attribute nodes.</li>
+            <li>Text inserted into HTML elements are text nodes.</li>
+            <li>Comments are comment nodes.</li>
+        </ul>
+    </table>
+
+    <script>
+        document.title = "Learn Dom and Bom"
+        console.log(document.title)
+
+        console.log(document.body)
+    </script>
+
+</body>
+
+</html>

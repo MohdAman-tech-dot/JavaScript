@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // Second method using if-else but its lengthy
+
+        let random = Math.random()
+        let first, second, third
+
+        // first
+        if (random < 0.33) {
+            first = "Crazy"
+        }
+        else if (random < 0.66 && random >= 0.33) {
+            first = "Amazing"
+        }
+        else {
+            first = "Fire"
+        }
+
+        // second
+        random = Math.random()
+        if (random < 0.33) {
+            second = "Foods"
+        }
+        else if (random < 0.66 && random >= 0.33) {
+            second = "Engine"
+        }
+        else {
+            second = "Garments"
+        }
+
+        // third
+        random = Math.random()
+        if (random < 0.33) {
+            third = "Limited"
+        }
+        else if (random < 0.66 && random >= 0.33) {
+            third = "Bros"
+        }
+        else {
+            third = "Hub"
+        }  
+
+        console.log(`${first} ${second} ${third}`)
+
+    </script>
+</body>
+
+</html>
