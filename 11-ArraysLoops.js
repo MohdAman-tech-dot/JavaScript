@@ -40,7 +40,7 @@ console.log("try:-",B)
 // 5. map() :- creates a new array by performing some operation on each element
 let q = [5,3,9,4,6]
 let newArr = q.map((value, index, array)=>{
-    return value**3     //power 3 :- q array's each multiply by 3 times with self 
+    return value**3     //power-3 :- q array's each multiply by 3 times with self 
 })
 console.log("V:-",newArr)
 

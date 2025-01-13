@@ -1,4 +1,4 @@
-let firstname = "Mohd EJAZ"
+let firstname = "Mohd AJAZ"
 let lastname = "Choudhary"
 console.log(firstname[0])
 console.log(firstname[1])
@@ -10,14 +10,14 @@ console.log(firstname.toUpperCase())                  //convert letters in upper
 console.log(firstname.toLowerCase())                 //convert letters in lowercase
 console.log(firstname.length)                       //check the length of the string
 console.log(firstname.slice(0, 4))                 //Divide a string into slice
-console.log(firstname.replace("d", "ammad"))        //Replace the letters or total string
+console.log(firstname.replace("d", "ammad"))      //Replace the letters or total string
 console.log(firstname.concat(" ", lastname))     //Replace the letters or total string
 
 let fullname = (firstname.trim())               //To remove whitespace
 console.log(fullname)
 
-let a = `Hey "EJAZ" you are best developer`    //Use backatick to write as it is string
+let a = `Hey "AJAZ" you are best developer`    //Use back-tick to write as it is string
 console.log(a)
 
-let b = "M\"EJAZ"
+let b = "M\"AJAZ"                             //We can also use backSlash(\) to write as it is string
 console.log(b)

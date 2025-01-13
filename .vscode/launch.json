@@ -25,6 +25,12 @@
             "name": "http://127.0.0.1:3000/14-Id & Classes.html",
             "request": "launch",
             "url": "http://127.0.0.1:3000/14-Id & Classes.html"
+        },
+        {
+            "type": "chrome",
+            "name": "http://127.0.0.1:3000/7-PracticeSet_3.html",
+            "request": "launch",
+            "url": "http://127.0.0.1:3000/7-PracticeSet_3.html"
         }
     ]
 }

@@ -9,7 +9,8 @@ console.log(a, b, c, p, q, r)
 // data type check with typeof function
 console.log(typeof a, typeof b, typeof c, typeof p, typeof q, typeof r)
 
-// ovject
+/*
+// object
 let obj = {
     name: "Mohd Aman",
     "jobe role": "Web Developer",
@@ -25,3 +26,4 @@ console.log(obj)
 obj.is_handsome = true
 obj.salary =  3600000
 console.log(obj)
+*/
