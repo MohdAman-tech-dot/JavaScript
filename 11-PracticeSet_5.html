@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Set-4</title>
+</head>
+
+<body>
+    <script>
+
+        let arr = [5, 9, 6, 8, 2]
+        /*
+        // Que:1 Create an array of numbers & take input from the user to add numbers to this arry
+        console.log("Before add a number:-", arr)
+        arr.push(parseInt(prompt("Enter the number to add")))
+        console.log("After add a number:-", arr)
+
+
+        // Que:2 Keep adding numbers to the array until 0 is added to the array
+        let add
+        while (add != 0) {
+            add = prompt("Enter the number until you doesn't add 0")
+            arr.push(add)
+            if (add != 0) {
+                console.log(arr)
+            }
+        }
+        // arr.push(add)
+        console.log(arr,"Thank you for enter the 0.")   
+        
+        // Que:3 filter for numbers divisible by 10 from a given array
+        function check(no) {
+            return no % 10 == 0
+        }        
+        let num = [10, 25, 4, 8, 5, 60, 15, 50]
+        let divide = num.filter(check)
+        console.log(divide)
+        
+        // Que:4 Create an array of square of given numbers
+        let square = arr.map((value)=>{
+            return value**2
+        })
+        console.log(square)
+        */
+
+        //Que:5 Use reduce to calculate factorial of given number from an array of first n natural number(n-being the number whose factorial needs to be calculated)
+        function factorial(n) {
+            return n < 0 ? "Factorial not defined for negative numbers" :
+                n === 0 ? 1 :
+                    Array.from({ length: n }, (_, i) => i + 1).reduce((acc, num) => acc * num, 1);
+        }
+
+        // Example usage
+        const n = 5;
+        console.log(`Factorial of ${n} is:`, factorial(n));
+
+        
+
+    </script>
+</body>
+
+</html>

@@ -45,13 +45,13 @@ let newArr = q.map((value, index, array)=>{
 console.log("V:-",newArr)
 
 // 6. filter() :- filters an array with values that passes a test, creates a new array
-let r = [5,8,9,6,7,3]
-
-console.log("VI:-",r.filter(checkNum))
 
 function checkNum(no) {
     return no>6
 }
+let r = [5,8,9,6,7,3]
+
+console.log("VI:-",r.filter(checkNum))
 
 // 7. reduce() :- (apne next element se fer next fer next continues operation perform krega)
                     //EX- [2,5,6]=2*5=10 fer 10*6=60
