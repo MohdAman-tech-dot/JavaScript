@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Set-7 Que-1</title>
+    
+    <style>
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        ul li {
+            list-style: none;
+            margin: 30px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- Que:1 Create a navbar and change the color of its first element to red -->
+    <Nav>
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Product</li>
+            <li>Contact</li>
+        </ul>
+    </Nav>
+
+
+    <!-- Javascript -->
+
+    <script>
+        let color = document.body.firstElementChild.firstElementChild.children[0]
+        color.style.color = "red"
+    </script>
+</body>
+
+</html>

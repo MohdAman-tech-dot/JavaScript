@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Set-7 Que-5</title>
+</head>
+
+<body>
+
+    <!-- Que:5 Which of the following is used to look for the farthest ancestor that matches a given css selector
+            (a) matches     (b) closest     (c) contains    (d) none of these -->
+
+    <!-- Answer: (b) -->
+
+    <!-- Example -->
+    <div id="Grandfather"> Mohd Suleman Choudhary
+        <div id="father"> Mohd Aiyyoob Choudhary
+            <div id="son"> Mohd Aman Choudhary (He is great developer and always try to improve himself)</div>
+        </div>
+    </div>
+    <!-- Javascript -->
+    <script>
+        let element = document.getElementById("son")
+        const checkClosest = element.closest("#father")
+        //to check the closest ancestor it must important that both and more ancestor have id selector or class selector
+        
+        console.log(checkClosest)
+        if (checkClosest) {
+            checkClosest.style.background = "tomato"
+        }
+    </script>
+
+</body>
+
+</html>

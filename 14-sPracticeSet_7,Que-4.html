@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Set-7 Que-4</title>
+</head>
+<body>
+
+    <!-- Que:4 Write a j.s code to change background of all <li> tags to cyan(color) -->
+        
+        <ul class="list">
+            <li>Home</li>
+            <li>Product</li>
+            <li>Contact</li>
+        </ul>
+
+        <!-- Javascript -->
+        <script>
+            document.body.querySelectorAll(".list").forEach(item => {
+                item.style.backgroundColor = "cyan"
+            })
+        </script>
+
+</body>
+</html>

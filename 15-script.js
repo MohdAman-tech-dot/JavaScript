@@ -8,7 +8,7 @@ document.getElementById("crimson").style.backgroundColor = "crimson"
 document.querySelector(".box").style.color = "SlateBlue"        //to select first element of all same classes to change
 
 document.querySelectorAll(".box").forEach(c =>{
-    c.style.backgroundColor = "violet"                         //to select all classes for changind
+    c.style.backgroundColor = "violet"                         //to select all classes for changing
 })
 
 document.getElementsByTagName("div")                        //to find all tags like we want to see all div tags
