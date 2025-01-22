@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adjacent</title>
+</head>
+
+<body>
+    <div class="dk">
+        <p style="background-color: red;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, odio?</p>
+    </div>
+
+    <div id="sk" style="color: rgb(19, 90, 148);">
+        man tha bada....., tu hota mera tu na mila gum h tera q diya dard hume hum aaj talak na samjhe bure h kya
+        itne tum aa na sake jo milne. Tu humko bhul gaya bas yrr hum hee pagal the socho tumhe jo raat din.
+    </div>
+
+
+    <script>
+        let cont = document.querySelector(".dk")
+
+        // insertAdjacentElement
+        let create = document.createElement("div")
+        create.textContent = "insertAdjacentElement:- beforebegin"
+        document.querySelector(".dk").insertAdjacentElement("beforebegin", create)
+
+        // insertAdjacentHTML
+        cont.insertAdjacentHTML("afterbegin", "<span> insertAdjacentHTML:- afterbegin </span>")
+
+        // insertAdjacentText
+        document.querySelector(".dk").insertAdjacentText("afterend", "insertAdjacentText:- afterend")
+
+
+        // Node remove method
+        document.querySelector("#sk").remove()
+        
+    </script>
+</body>
+
+</html>

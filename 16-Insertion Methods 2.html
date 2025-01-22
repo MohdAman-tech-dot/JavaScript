@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insertion Method</title>
+</head>
+
+<body>
+
+    <div class="container">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa, maiores molestiae repudiandae rerum maxime aliquam totam saepe minima quod molestias, suscipit adipisci, modi perferendis accusantium perspiciatis dicta iusto quia nemo explicabo! Adipisci vitae ut, eveniet dolorem, maxime laudantium assumenda aliquid hic atque, beatae quas. Quos tempora laudantium odit aliquid mollitia!
+    </div>
+
+
+    <p class="repl" style="color: green;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia, consequatur veniam. Illo atque iste nisi.</p>
+    <script>
+
+        //1. append():-insert tag or attributes at the end of node using 
+        let end = document.createElement("div")       //create div tag
+        end.className = "web"                           //add class
+        end.innerHTML = "<b>Hey Mohd Aman Choudhary</b>"  //write something in div tag 
+        document.body.append(end)
+
+        let newD = document.createElement("p")
+        newD.innerHTML = "<h2> Mohd Aiyyoob Choudhary </h2>"
+        document.body.querySelector(".web").append(newD)
+
+        //2. prepend():-insert at the beginning of the node 
+        let begin = document.createElement("span")
+        begin.innerHTML = "Welcome to the developer world"
+        document.body.prepend(begin)
+
+        //3. before():- insert before the node 
+        let bef = document.createElement("h1")
+        bef.innerHTML = "Welcome to the kingdom of Mohd Aman Choudhary"
+        document.body.querySelector(".container").before(bef)
+
+        //4. after():- insert after the node
+        let aft = document.createElement("button")
+        aft.innerHTML = "Register"
+        document.body.querySelector(".container").after(aft)
+
+        //5. replace():- replace node with the given node
+        let rep = document.createElement("div")
+        rep.innerHTML = "<u>Hello My friends, Welcome again to the kingdom of Mohd Aman Choudhary</u>"
+        document.body.querySelector(".repl").replaceWith(rep)
+
+    </script>
+</body>
+
+</html>

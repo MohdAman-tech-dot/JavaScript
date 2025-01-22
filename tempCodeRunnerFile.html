@@ -1,0 +1,149 @@
+// const aR = [1,2,3,4,5,6,7,8]
+// let newaR = aR.map((num) => num > 4)
+// console.log(newaR)
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmark Manager</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        form input {
+            flex: 1;
+            padding: 10px;
+            margin-right: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        form button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #28a745;
+            color: white;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background-color: #218838;
+        }
+
+        .bookmark-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .bookmark-item {
+            display: flex;
+            justify-content: space-between;
+            background: #f9f9f9;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+
+        .bookmark-item a {
+            text-decoration: none;
+            color: #007bff;
+        }
+
+        .bookmark-item a:hover {
+            text-decoration: underline;
+        }
+
+        .delete-btn {
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .delete-btn:hover {
+            background-color: #c82333;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Bookmark Manager</h1>
+        <form id="bookmark-form">
+            <input type="text" id="website-name" placeholder="Website Name" required>
+            <input type="url" id="website-url" placeholder="Website URL" required>
+            <button type="submit">Add Bookmark</button>
+        </form>
+        <ul class="bookmark-list" id="bookmark-list"></ul>
+    </div>
+
+    <script>
+        const form = document.getElementById('bookmark-form');
+        const bookmarkList = document.getElementById('bookmark-list');
+
+        // Event listener for form submission
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();     // Prevent the default page refresh on form submission.
+
+            const name = document.getElementById('website-name').value; // Get the input for the website name.
+            const url = document.getElementById('website-url').value;   // Get the input for the website URL.
+
+            addBookmark(name, url);     // Call the function to add a bookmark.
+            form.reset();            // Clear the input fields after adding a bookmark.
+        });
+
+        // Add bookmark
+        function addBookmark(name, url) {
+            const li = document.createElement('li');    // Create a new list item (`<li>`)
+            li.className = 'bookmark-item';          // Assign a class for styling.
+            li.innerHTML = `
+                <span>
+                    <a href="${url}" target="_blank">${name}</a>
+                </span>
+                <button class="delete-btn" onclick="deleteBookmark(this)">Delete</button>
+            `;      // Add a clickable link and a delete button inside the `<li>`.
+
+            bookmarkList.appendChild(li);       // Add the new `<li>` to the bookmark list (`<ul>`).
+        }
+
+        // Delete a bookmark
+        function deleteBookmark(button) {
+            const li = button.parentElement;    // Find the parent `<li>` of the clicked delete button.
+            bookmarkList.removeChild(li);   // Remove the `<li>` from the list.
+        }
+    </script>
+</body>
+
+</html>

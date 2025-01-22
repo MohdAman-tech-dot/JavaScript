@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Bubbling</title>
+    <style>
+        .container {
+            background-color: rgb(84, 158, 9);
+            width: 400px;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .child {
+            background-color: rgb(168, 57, 79);
+            width: 350px;
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .babyChild {
+            width: 300px;
+            border: 2px solid black;
+            padding: 15px;
+            margin: 13px;
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="child">
+            <div class="babyChild">Its Mohd Aman Choudhary</div>
+        </div>
+    </div>
+
+
+    <script>
+        document.querySelector(".babyChild").addEventListener("click", (e) => {
+            e.stopPropagation()
+            alert("Baby crying after touch him")
+        })
+
+        document.querySelector(".child").addEventListener("click", (e) => {
+            alert("child was angry ")
+        })
+
+        document.querySelector(".container").addEventListener("click", (e) => {
+            alert("Container was clicked")
+        })
+
+    </script>
+
+</body>
+
+</html>

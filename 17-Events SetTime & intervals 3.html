@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SetTime and SetIntervals</title>
+    <style>
+        .container {
+            background-color: rgb(84, 158, 9);
+            width: 400px;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .child {
+            background-color: rgb(168, 57, 79);
+            width: 350px;
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .babyChild {
+            width: 300px;
+            border: 2px solid black;
+            padding: 15px;
+            margin: 13px;
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="child">
+            <div class="babyChild">Its Chota Choudhary</div>
+        </div>
+    </div>
+
+    <script>
+        // setInterval and setTimeout
+
+        function GetRandomColor() {
+            let random1 = Math.ceil(0 + Math.random() * 255)
+            let random2 = Math.ceil(0 + Math.random() * 255)
+            let random3 = Math.ceil(0 + Math.random() * 255)
+            return `rgb(${random1}, ${random2}, ${random3})`
+        }
+
+        //repeat and repeat after the given interval time
+        const a = setInterval(() => {
+            document.querySelector(".babyChild").style.background = GetRandomColor()
+        }, 300);
+        console.log(a)
+        // clearInterval(1)       //stop the interval 
+
+
+        // only one time change after given time
+        setTimeout(() => {
+            document.querySelector(".container").style.background = GetRandomColor()
+        }, 1000);
+    </script>
+
+</body>
+
+</html>

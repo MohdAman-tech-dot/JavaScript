@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <style>
+        button {
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">Hey, What is your name?</div>
+    </div>
+    <button id="btn">Events MDN</button>
+
+
+    <!-- Javascrip -->
+    <script>
+        let button = document.getElementById("btn")
+        
+        //single click
+        button.addEventListener("click", () => {
+            document.querySelector(".box").innerHTML = "Myself Mohd Aman Choudhary"           
+        })
+
+        // double click
+        button.addEventListener("dblclick", () => {
+            window.location.href = "https://developer.mozilla.org/en-US/docs/Web/Events"       // Events refference MDN link
+        })
+
+        // right click method
+        button.addEventListener("contextmenu", () => {
+             alert("Myself Mohd Aman")
+        })
+
+        //keydown - to show all words in console which you type
+        document.addEventListener("keydown", (e) => {
+             console.log(e.key, e.keyCode)
+        })
+
+
+
+    </script>
+</body>
+
+</html>

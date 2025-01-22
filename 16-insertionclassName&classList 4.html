@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Name and Class List</title>
+</head>
+<body>
+    <div class="container bgred ">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo sit quos debitis dolorum, expedita reiciendis officia dolorem. Sed, explicabo numquam.
+    </div>
+
+
+    <script>
+        let addORremoveClass = document.querySelector(".container").classList
+        console.log("Class List:-",addORremoveClass)        
+        
+        let name = document.querySelector(".container").className
+        console.log("Class Name:-",name)
+
+        //1. Add a class
+        addORremoveClass.add("col")
+        console.log(addORremoveClass)
+
+        //2. Remove a class
+        addORremoveClass.remove("bgred")
+        console.log(addORremoveClass)
+
+        //3. toggle  than remove it if not present than create it
+        addORremoveClass.toggle("dard")         // if given class("dard") not present than toggle create it
+        console.log(addORremoveClass)       
+
+        addORremoveClass.toggle("col")        // if given calss("col") present than toggle remove it
+        console.log(addORremoveClass)
+
+        //4. contain class - check if class is present return "true" otherwise "false"
+        addORremoveClass.contains("dard")
+        console.log("checkContain",addORremoveClass)
+
+    </script>
+</body>
+</html>

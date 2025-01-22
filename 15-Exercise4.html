@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random color using DOM metods</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .box {
+            height: 50px;
+            width: 50px;
+            border: 1px solid black;
+            text-align: center;
+
+        }
+
+        .square {
+            height: 50px;
+            width: 50px;
+            border: 1px solid black;
+            margin: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Given 5 boxes, Assign a random color and a random background to each box using DOM concepts -->
+
+    <div class="container">
+        <div class="box">Box 1</div>
+        <div class="box">Box 2</div>
+        <div class="box">Box 3</div>
+        <div class="box">Box 4</div>
+        <div class="box">Box 5</div>
+    </div>
+
+    <div class="container cont">
+        <div class="square">First</div>
+        <div class="square">Second</div>
+        <div class="square">Third</div>
+        <div class="square">Fourth</div>
+        <div class="square">Fifth</div>
+    </div>
+
+    <!-- Javascript -->
+
+    <script>
+        let randomcolor = Math.floor(Math.random() * 16777215).toString(16)
+        document.body.querySelectorAll(".box").forEach(element => {
+            element.style.backgroundColor = "#" + randomcolor
+        });
+        
+
+        // second method different color to the each box 
+        let dabbe = document.querySelector(".cont").children
+
+        function GetRandomColor() {
+            let random1 = Math.ceil(0+Math.random()*255)
+            let random2 = Math.ceil(0+Math.random()*255)
+            let random3 = Math.ceil(0+Math.random()*255)
+            return `rgb(${random1}, ${random2}, ${random3})`
+        }
+        
+        Array.from(dabbe).forEach(e=>{
+            e.style.backgroundColor = GetRandomColor()
+            e.style.color = GetRandomColor()
+        })
+
+    </script>
+</body>
+
+</html>
