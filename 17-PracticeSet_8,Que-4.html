@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetching content</title>
+</head>
+<!-- Que:4- Write a j.s program to keep fatching content of a website everty 5min -->
+
+<body>
+    <script>
+        // const url = "https://example.com/api/data"
+
+        // function to fetch data or content
+        function fetchData() {
+            fetch(url)
+            .then(responce => responce.json())
+            .then(data => console.log("Fetch Data:", data))
+            .catch(error => console.log("Error:", error))
+        }
+        setInterval(fetchData, 3000)
+
+        fetchData()
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glowing Bulb</title>
+    <style>
+        .bulb {
+            height: 100px;
+            width: 100px;
+            margin: 50px auto;
+            border-radius: 4em;
+            background-color: rgb(209, 199, 199);
+            transition: box-shadow 0.3s ease, background-color 0.3s ease;
+        }
+
+        button {
+            margin: auto 600px;
+        }
+
+        .glow {
+            background-color: yellow;
+            box-shadow: 0 0 20px 5px yellow;
+        }
+    </style>
+</head>
+<!-- Que:5 Create a glowing bulb effect using classList toggle method in javascript -->
+
+<body>
+    <div class="bulb" id="bulb"></div>
+    <button id="toggleButton">Toggle</button>
+
+    <script>
+        const bulb = document.getElementById("bulb")
+        const toggleButton = document.getElementById("toggleButton")
+        toggleButton.addEventListener('click', () => {
+            bulb.classList.toggle('glow')
+        })
+    </script>
+</body>
+
+</html>
